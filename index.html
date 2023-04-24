@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+<div class="API_conteiner">
+    <header>
+        <div class="header_nav">
+            <nav class="nav_bar">
+                <h1 class="nav_bar_title">Pojištění APP</h1>
+                <ul>
+                    <li> <a href="#">Pojištěnci</a> </li>
+                    <!-- <li><a href="#">Pojištění</a></li>
+                    <li><a href="#">Události</a></li> -->
+                    <li><a href="#">O aplikaci</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <section class="section_table">
+        <table>
+            <caption>POJIŠTĚNCI</caption>
+            <thead>
+              <tr>
+                <th scope="col">Jméno a příjmeni</th>
+                <th scope="col">Telefon</th>
+                <th scope="col">Věk</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="tr_first">
+                <td data-label="Jméno a příjmeni">Pepa Novák</td>
+                <td data-label="Telefon">789567354</td>
+                <td data-label="Věk">60</td>
+              </tr>
+              <tr class="tr_secont">
+                <td data-label="Jméno a příjmeni">Pepa Novák</td>
+                <td data-label="Telefon">789567354</td>
+                <td data-label="Věk">60</td>
+              </tr>
+              <tr class="tr_first">
+                <td data-label="Jméno a příjmeni">Pepa Novák</td>
+                <td data-label="Telefon">789567354</td>
+                <td data-label="Věk">60</td>
+              </tr>
+              <tr class="tr_secont">
+                <td data-label="Jméno a příjmeni">Pepa Novák</td>
+                <td data-label="Telefon">789567354</td>
+                <td data-label="Věk">60</td>
+              </tr>
+            </tbody>
+          </table>
+    </section>
+    <section class="section_form">
+    <div class="form_container">
+        <form action="#">
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Jméno</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="fname" name="firstname" placeholder="Jméno">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Příjmení</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="lastname" placeholder="Příjmení">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="age">Věk</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="age" name="age" placeholder="Věk">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Telefon</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="phone" name="phone" placeholder="Telefon">
+            </div>
+          </div>
+          
+          <div class="row">
+            <input type="submit" value="Uložit">
+          </div>
+        </form>
+      </div>
+    </section>
+</div>
+
+   <script src="index.js"></script> 
+</body>
+</html>

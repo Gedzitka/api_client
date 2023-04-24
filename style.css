@@ -1,0 +1,252 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, ::before, ::after {
+    box-sizing: inherit;
+  }
+  
+  
+
+  body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(234, 237, 241);
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1em;
+
+
+  }
+ 
+  a{
+    text-decoration: none;
+    color: white;
+  }
+  .API_conteiner{
+    margin:20px 0;
+    width: 90%;
+    height: auto;
+    background-color:#d0d1e2;
+    border-radius: 5px
+  }
+
+
+  .header_nav{
+    width: 100%;
+    height: auto;
+    background-color: #061642;
+    padding: 0 50px;
+    box-shadow: -4px 7px 5px -4px rgba(0,0,0,0.5);
+    border-radius: 5px
+
+  }
+  .nav_bar{
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+
+  }
+  ul{
+    display: flex;
+    gap: 5em;
+    list-style: none;
+    
+  }
+  li{
+  padding: 0.5em; 
+  }
+  li:hover{
+    background-color: #d78f43;
+    
+    border-radius: 5px;
+    box-shadow: -4px 7px 18px -4px rgba(210, 136, 63, 0.52);
+   
+  }
+  h1{
+    color: white;
+  }
+
+  @media screen and (max-width: 600px) {
+    .header_nav{
+      flex-direction: row;
+      padding: 20px;
+
+    }
+    .nav_bar{
+      flex-direction: column;
+      justify-content: center;
+    
+
+      margin: auto;
+      gap: 0;
+    } 
+    ul{
+      flex-direction: column;
+      align-items: center;
+      gap:1em;
+      padding: 0;
+      
+    }
+  }
+ .section_table{
+  display: flex;
+  justify-content: center;
+  
+  
+
+}
+  table {
+    border: 1px solid #99a0e8;
+    border-collapse: collapse;
+    margin-top: 20px;
+    padding: 0;
+    width: 90%;
+    table-layout: fixed;
+    
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr.tr_first {
+    background-color: #b3add1;
+    border: 1px solid #8073b6;
+    padding: .35em;
+    
+  }
+  table tr.tr_secont{
+    margin: 0;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+  
+  @media screen and (max-width: 600px) {
+    table {
+      border: 0;
+    }
+  
+    table caption {
+      font-size: 1.3em;
+    }
+    
+    table thead {
+      border: none;
+      clip: rect(0 0 0 0);
+      height: 1px;
+      margin: -1px;
+      overflow: hidden;
+      padding: 0;
+      position: absolute;
+      width: 1px;
+    }
+    
+    table tr {
+      border-bottom: 3px solid #ddd;
+      display: block;
+      margin-bottom: .625em;
+    }
+    
+    table td {
+      border-bottom: 1px solid #ddd;
+      display: block;
+      font-size: .8em;
+      text-align: right;
+    }
+    
+    table td::before {
+      /*
+      * aria-label has no advantage, it won't be read inside a table
+      content: attr(aria-label);
+      */
+      content: attr(data-label);
+      float: left;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+    
+    table td:last-child {
+      border-bottom: 0;
+    }
+  }
+
+  .section_form{
+    display: flex;
+    justify-content: center;
+  
+  }
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    resize: vertical;
+  }
+  
+  label {
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+  }
+  
+  input[type=submit] {
+    background-color:#d78f43;
+    margin: 20px auto;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #eac093;
+  }
+  
+  .form_container {
+    margin: 20px;
+    width: 90%;
+    border-radius: 5px;
+    background-color: #d0d1e2;;
+    padding: 20px;
+  }
+  
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
