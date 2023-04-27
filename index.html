@@ -8,7 +8,8 @@
     <title>Document</title>
 </head>
 <body>
-    
+  
+
 <div class="API_conteiner">
     <header>
         <div class="header_nav">
@@ -23,6 +24,7 @@
             </nav>
         </div>
     </header>
+    <div  id="info"></div>
     <section class="section_table">
         <table>
             <caption>POJIŠTĚNCI</caption>
@@ -86,7 +88,7 @@
           </div>
           <div class="row">
             <div class="col-25">
-              <label for="lname">Telefon</label>
+              <label for="phone">Telefon</label>
             </div>
             <div class="col-75">
               <input type="text" id="phone" name="phone" placeholder="Telefon">
@@ -94,13 +96,15 @@
           </div>
           
           <div class="row">
-            <input type="submit" value="Uložit">
+            <input type="submit" id="submit" value="Uložit">
           </div>
         </form>
       </div>
     </section>
 </div>
 
+
    <script src="index.js"></script> 
+   <script src="servis.js"></script>
 </body>
 </html>
