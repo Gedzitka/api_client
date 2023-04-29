@@ -24,13 +24,16 @@ html {
     color: white;
   }
   .API_conteiner{
-    margin:20px 0;
+    margin:0.5em 0;
     width: 90%;
     height: auto;
     background-color:#d0d1e2;
     border-radius: 5px
   }
 
+nav{
+  background-color: #061642;
+}
 
   .header_nav{
     width: 100%;
@@ -54,8 +57,10 @@ html {
     list-style: none;
     
   }
+ 
   li{
   padding: 0.5em; 
+  color: white;
   }
   li:hover{
     background-color: #d78f43;
@@ -66,59 +71,36 @@ html {
   }
   h1{
     color: white;
+    font-size: 1.5em;
+    margin: 0.5em;
+  }
+  h2{
+    margin: 0;
   }
 
-  @media screen and (max-width: 600px) {
-    .header_nav{
-      flex-direction: row;
-      padding: 20px;
-
-    }
-    .nav_bar{
-      flex-direction: column;
-      justify-content: center;
-    
-
-      margin: auto;
-      gap: 0;
-    } 
-    ul{
-      flex-direction: column;
-      align-items: center;
-      gap:1em;
-      padding: 0;
-      
-    }
-  }
+ 
  .section_table{
   display: flex;
+  margin: 4em 1em;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
   
   
 
 }
+
   table {
     border: 1px solid #99a0e8;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 2em;
     padding: 0;
-    width: 90%;
+    width: 80%;
     table-layout: fixed;
     
   }
-  
-  table caption {
-    font-size: 1.5em;
-    margin: .5em 0 .75em;
-  }
-  
-  table tr.tr_first {
-    background-color: #b3add1;
-    border: 1px solid #8073b6;
-    padding: .35em;
-    
-  }
-  table tr.tr_secont{
+
+   table tr.tr_secont{
     margin: 0;
   }
   
@@ -132,7 +114,7 @@ html {
     font-size: .85em;
     letter-spacing: .1em;
     text-transform: uppercase;
-  }
+  } 
   
   @media screen and (max-width: 600px) {
     table {
@@ -168,10 +150,6 @@ html {
     }
     
     table td::before {
-      /*
-      * aria-label has no advantage, it won't be read inside a table
-      content: attr(aria-label);
-      */
       content: attr(data-label);
       float: left;
       font-weight: bold;
@@ -186,6 +164,8 @@ html {
   .section_form{
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    align-items: center;
   
   }
   input[type=text], select, textarea {
@@ -217,7 +197,7 @@ html {
   }
   
   .form_container {
-    margin: 20px;
+  
     width: 90%;
     border-radius: 5px;
     background-color: #d0d1e2;;
@@ -235,15 +215,13 @@ html {
     width: 75%;
     margin-top: 6px;
   }
-  
-  /* Clear floats after the columns */
   .row:after {
     content: "";
     display: table;
     clear: both;
   }
   
-  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  
   @media screen and (max-width: 600px) {
     .col-25, .col-75, input[type=submit] {
       width: 100%;
