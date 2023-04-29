@@ -31,7 +31,6 @@ class clients {
         };
       
 		vyhledatInput.onclick = (e) => {
-			//zabráníme reloadu stránky
 			e.preventDefault();
 			const hledanyText = planetaInput.value;
 			if (hledanyText) this._ziskejInformace(hledanyText);
@@ -41,8 +40,8 @@ class clients {
 _postClient(clientInfo) {
         Ajax.post('http://localhost:5000/api/clients', { firstName, lastName, age, phone })
             .then((data) => {
-                // Obsluha přijatých data
-                this._getClient(clientInfo); })
+                this._getClient(clientInfo); 
+            })
             .catch((err) => {
                 const informationDiv = document.getElementById('info');
                 informationDiv.innerHTML = '<div style="height: 10px;background-color: rgb(219, 40, 40);">Vyskytl se error při odeslání dat.</div>';
@@ -66,28 +65,33 @@ _postClient(clientInfo) {
     _writeClient(data) {
       const result = document.getElementById('section_table');
       result.innerHTML = "";
+ if(data.results.lenght){
+    for(const clientData of data.results){
       const table = document.createElement("table");
-      const coption = document.createElement("caption");
-      coption.innerHTML = "POJIŠTĚNCI";
+      const coption = document.createElement("h2");
+      coption.innerHTML = "Pojištěnec";
       const thead = document.createElement("thead");
       thead.innerHTML = ` <tr>
      <th scope="col">Jméno a příjmeni</th>
      <th scope="col">Telefon</th>
      <th scope="col">Věk</th>
         </tr>`;
-const tbody = document.createElement("tbody");
+const tbody = document.createElement("tbody"); 
 data.results.forEach(client => {
             const tr = document.createElement("tr");
             tr.innerHTML = `
-            <td data-label="Jméno a příjmeni">${firstName} ${lastName} </td>
-            <td data-label="Telefon">${phone} </td>
-            <td data-label="Věk">${age}</td>
+            <td data-label="Jméno a příjmeni">${clientData.firstName} ${lastName} </td>
+            <td data-label="Telefon">${clientData.phone} </td>
+            <td data-label="Věk">${clientData.age}</td>
           `
         result.appendChild(table);
-});
-    }     
+})
+    }  else{
+        result.innerHTML='<div>Bohužel jsme nic nenašli.</div>'
 
+    }  
 }
+}}
 
       
     //     data.results.forEach(user => {
