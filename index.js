@@ -76,7 +76,7 @@ _postClient(clientInfo) {
      <th scope="col">Telefon</th>
      <th scope="col">Věk</th>
         </tr>`;
-const tbody = document.createElement("tbody");
+const tbody = document.createElement("tbody"); 
 data.results.forEach(client => {
             const tr = document.createElement("tr");
             tr.innerHTML = `
